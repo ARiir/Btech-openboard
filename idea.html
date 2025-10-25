@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech OpenBoard - Submit Idea</title>
+    <link rel="stylesheet" href="style4.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-name">
+            <span class="material-icons logo-icon">school</span>
+            <span class="logo-text">BTech OpenBoard</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="" class="nav-item active">Submit Idea</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-initials">JS</div>
+            <span class="user-name">John Smith</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">Submit Your Idea</h1>
+
+        <form id="ideaSubmissionForm" class="idea-form">
+            <div class="form-group">
+                <label for="title">Suggestion Title *</label>
+                <input type="text" id="title" placeholder="Give your idea a clear, descriptive title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category *</label>
+                <select id="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="it">Technology & IT</option>
+                    <option value="life">Student Life</option>
+                    <option value="facility">Campus Facilities</option>
+                    <option value="academic">Academic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description *</label>
+                <textarea id="description" rows="6" placeholder="Describe your suggestion in detail. What problem does it solve? How would it benefit the campus?" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="impact">Expected Impact</label>
+                <textarea id="impact" rows="4" placeholder="How many people would benefit? What would be the positive outcomes?"></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="submit-button">Submit Idea</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="windows-activation-notice">
+        <span>Activate Windows</span>
+        <span>Go to Settings to activate Windows.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

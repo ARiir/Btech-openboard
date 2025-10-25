@@ -1,0 +1,205 @@
+/* Color Palette */
+:root {
+    --primary-blue: #3471e0; /* Main BTech OpenBoard blue */
+    --light-blue-bg: #f4f7fd; /* Very light blue/off-white for background */
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-blue-bg);
+    color: var(--text-color-dark);
+    line-height: 1.5;
+}
+
+/* -------------------- Navigation Bar -------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.logo-icon {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-color-medium);
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-initials {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.user-name {
+    font-size: 0.9em;
+    color: var(--text-color-dark);
+}
+
+/* -------------------- Main Form Content -------------------- */
+.container {
+    /* Max width to center the form nicely on a desktop screen */
+    max-width: 900px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-color-dark);
+    margin-bottom: 30px;
+}
+
+.idea-form {
+    /* Form background and shadow to create the floating card effect */
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    margin-bottom: 8px;
+}
+
+/* Common styling for input, select, and textarea */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    color: var(--text-color-dark);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit; 
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(52, 113, 224, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--text-color-medium);
+    opacity: 0.7;
+}
+
+/* Custom styling for the select box dropdown arrow */
+select {
+    appearance: none; /* Remove default select styling */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 35px; /* Make space for the custom arrow */
+}
+
+
+/* Form Actions and Submit Button */
+.form-actions {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.submit-button {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #2b60cc;
+}
+
+/* -------------------- Windows Activation Notice -------------------- */
+.windows-activation-notice {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.windows-activation-notice span:first-child {
+    font-weight: 700;
+    margin-bottom: 2px;
+}

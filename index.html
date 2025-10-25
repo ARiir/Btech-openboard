@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech OpenBoard - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-name">
+            <span class="material-icons logo-icon">school</span>
+            <span class="logo-text">BTech OpenBoard</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item active">Home</a>
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="idea.html" class="nav-item">Submit Idea</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-initials">JS</div>
+            <span class="user-name">John Smith</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="welcome-banner">
+            <div class="banner-content">
+                <h2>Welcome to BTech OpenBoard! 👋</h2>
+                <p>Your voice matters. Share ideas, collaborate with peers, and help improve our campus together.</p>
+                <div class="banner-actions">
+                    <button class="btn primary" id="submitNewIdeaBtn">Submit New Idea</button>
+                    <button class="btn secondary" id="browseIdeasBtn">Browse Ideas</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-cards">
+            <div class="card">
+                <span class="material-icons card-icon">lightbulb</span>
+                <h3>Trending Ideas</h3>
+                <p>See what's popular on campus</p>
+                <a href="#" class="card-link">View Trending →</a>
+            </div>
+            <div class="card">
+                <span class="material-icons card-icon">bar_chart</span>
+                <h3>Recent Updates</h3>
+                <p>Track implementation progress</p>
+                <a href="#" class="card-link">View Updates →</a>
+            </div>
+            <div class="card">
+                <span class="material-icons card-icon">person_outline</span>
+                <h3>Your Impact</h3>
+                <p>See your contributions</p>
+                <a href="#" class="card-link">View Profile →</a>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-item">
+                <span class="material-icons status-icon success">check_circle</span>
+                <p><strong>New WiFi hotspots installed in Library</strong></p>
+                <p class="activity-meta">Suggested by Sarah Chen • Implemented 2 days ago</p>
+            </div>
+            <div class="activity-item">
+                <span class="material-icons status-icon info">info</span>
+                <p><strong>Proposed extended cafeteria hours</strong></p>
+                <p class="activity-meta">Suggested by Mike Johnson • Under Review 3 days ago</p>
+            </div>
+            <div class="activity-item">
+                <span class="material-icons status-icon warning">timelapse</span>
+                <p><strong>New smart classroom booking system is in progress</strong></p>
+                <p class="activity-meta">Suggested by Emily White • In Progress 1 week ago</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="windows-activation-notice">
+        <span>Activate Windows</span>
+        <span>Go to Settings to activate Windows.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
