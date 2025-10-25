@@ -1,0 +1,396 @@
+/* Color Palette */
+:root {
+    --primary-blue: #3471e0; /* Main BTech OpenBoard blue */
+    --light-blue-bg: #f4f7fd; /* Very light blue/off-white for background */
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+
+    /* Admin Specific Colors */
+    --kpi-primary-color: var(--primary-blue);
+    --kpi-warn-color: #ff9800; /* Orange for flagged content */
+    --kpi-success-color: #4CAF50; /* Green for active users */
+
+    --btn-approve: #4CAF50;
+    --btn-reject: #F44336;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-blue-bg);
+    color: var(--text-color-dark);
+    line-height: 1.5;
+}
+
+/* -------------------- Navigation Bar (Reused) -------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.logo-icon {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-color-medium);
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-initials {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.user-name {
+    font-size: 0.9em;
+    color: var(--text-color-dark);
+}
+
+/* -------------------- Main Content Area -------------------- */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-color-dark);
+    margin-bottom: 30px;
+}
+
+/* -------------------- Admin KPI Grid -------------------- */
+.admin-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.kpi-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-title {
+    display: block;
+    font-size: 1.1em;
+    color: var(--text-color-medium);
+    margin-bottom: 10px;
+}
+
+.kpi-value {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.kpi-value.primary { color: var(--kpi-primary-color); }
+.kpi-value.warn { color: var(--kpi-warn-color); }
+.kpi-value.success { color: var(--kpi-success-color); }
+
+.kpi-description {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-bottom: 15px;
+}
+
+.kpi-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.kpi-link:hover {
+    color: #2b60cc;
+    text-decoration: underline;
+}
+
+/* -------------------- Admin Panels Grid (Suggestions & Users) -------------------- */
+.admin-panels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.panel-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.panel-card h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    margin-bottom: 25px;
+}
+
+/* Recent Suggestions Panel */
+.suggestion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-details {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.suggestion-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--primary-blue);
+    margin-bottom: 3px;
+}
+
+.suggestion-meta {
+    font-size: 0.85em;
+    color: var(--text-color-medium);
+}
+
+.suggestion-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.approve-btn {
+    background-color: var(--btn-approve);
+    color: white;
+}
+.approve-btn:hover {
+    background-color: #3e8e41;
+}
+
+.reject-btn {
+    background-color: var(--btn-reject);
+    color: white;
+}
+.reject-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* User Management Panel */
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.user-item:last-child {
+    border-bottom: none;
+}
+
+.user-details {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.user-name {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    margin-bottom: 3px;
+}
+
+.user-meta {
+    font-size: 0.85em;
+    color: var(--text-color-medium);
+}
+
+.view-profile-link {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 0.9em;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.view-profile-link:hover {
+    color: #2b60cc;
+    text-decoration: underline;
+}
+
+/* -------------------- Windows Activation Notice -------------------- */
+.windows-activation-notice {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.windows-activation-notice span:first-child {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* -------------------- Responsive Adjustments -------------------- */
+@media (max-width: 992px) {
+    .admin-kpi-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .admin-panels-grid {
+        grid-template-columns: 1fr; /* Stack panels vertically */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+    }
+    .nav-links {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 10px;
+    }
+    .user-profile {
+        margin-left: auto;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+    .page-title {
+        font-size: 1.8em;
+    }
+    .kpi-card {
+        padding: 20px;
+    }
+    .kpi-value {
+        font-size: 2em;
+    }
+    .panel-card {
+        padding: 20px;
+    }
+    .panel-card h3 {
+        font-size: 1.2em;
+    }
+    .suggestion-item, .user-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .suggestion-actions {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .btn {
+        flex-grow: 1;
+    }
+    .view-profile-link {
+        width: 100%;
+        text-align: right;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+    .logo-name {
+        font-size: 1em;
+    }
+    .user-name {
+        display: none;
+    }
+    .nav-links {
+        font-size: 0.9em;
+    }
+    .admin-kpi-grid {
+        grid-template-columns: 1fr; /* Single column KPIs */
+    }
+    .suggestion-title, .user-name {
+        font-size: 1em;
+    }
+}

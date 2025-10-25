@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech OpenBoard - Admin Panel</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-name">
+            <span class="material-icons logo-icon">school</span>
+            <span class="logo-text">BTech OpenBoard</span>
+        </div>
+        <nav class="nav-links">
+            <a href="static.html" class="nav-item">Statistic</a>
+            <a href="app.html" class="nav-item active">Approval</a>
+            <a href="user.html" class="nav-item">User</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-initials">JS</div>
+            <span class="user-name">John Smith</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">Admin Panel</h1>
+
+        <section class="admin-kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-title">Pending Reviews</span>
+                <span class="kpi-value primary">23</span>
+                <p class="kpi-description">Suggestions awaiting review</p>
+                <a href="#" class="kpi-link">Review Now →</a>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-title">Flagged Content</span>
+                <span class="kpi-value warn">3</span>
+                <p class="kpi-description">Items requiring moderation</p>
+                <a href="#" class="kpi-link">Moderate →</a>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-title">Active Users</span>
+                <span class="kpi-value success">1,234</span>
+                <p class="kpi-description">Users active this month</p>
+                <a href="#" class="kpi-link">Manage →</a>
+            </div>
+        </section>
+
+        <div class="admin-panels-grid">
+            <div class="recent-suggestions-panel panel-card">
+                <h3>Recent Suggestions</h3>
+                <div class="suggestion-item" data-suggestion-id="1">
+                    <div class="suggestion-details">
+                        <p class="suggestion-title">Improved WiFi in Dormitories</p>
+                        <p class="suggestion-meta">By Alex Thompson • Technology & IT</p>
+                    </div>
+                    <div class="suggestion-actions">
+                        <button class="btn approve-btn">Approve</button>
+                        <button class="btn reject-btn">Reject</button>
+                    </div>
+                </div>
+                <div class="suggestion-item" data-suggestion-id="2">
+                    <div class="suggestion-details">
+                        <p class="suggestion-title">More Recycling Bins</p>
+                        <p class="suggestion-meta">By Emma Davis • Sustainability</p>
+                    </div>
+                    <div class="suggestion-actions">
+                        <button class="btn approve-btn">Approve</button>
+                        <button class="btn reject-btn">Reject</button>
+                    </div>
+                </div>
+                <!-- More suggestion items can be added here --></div>
+
+            <div class="user-management-panel panel-card">
+                <h3>User Management</h3>
+                <div class="user-item">
+                    <div class="user-details">
+                        <p class="user-name">Sarah Chen</p>
+                        <p class="user-meta">Student • 12 suggestions • High engagement</p>
+                    </div>
+                    <a href="#" class="view-profile-link">View Profile</a>
+                </div>
+                <div class="user-item">
+                    <div class="user-details">
+                        <p class="user-name">Mike Johnson</p>
+                        <p class="user-meta">Faculty • 6 suggestions • Moderator</p>
+                    </div>
+                    <a href="#" class="view-profile-link">View Profile</a>
+                </div>
+                <!-- More user items can be added here --></div>
+        </div>
+    </div>
+
+    <div class="windows-activation-notice">
+        <span>Activate Windows</span>
+        <span>Go to Settings to activate Windows.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

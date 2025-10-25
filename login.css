@@ -1,0 +1,229 @@
+:root {
+    --primary-blue: #3471e0; /* A vibrant blue for buttons and accents */
+    --light-blue-bg: #e6f0ff; /* Lighter blue for card elements */
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --text-color-light: #999;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --gradient-start: #7f7fd5; /* Lighter purple from the image */
+    --gradient-end: #86a8e7; /* Lighter blue from the image */
+}
+
+/* General Body and Background */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end)); /* Main background */
+    overflow: hidden; /* Prevent scroll for the activation notice */
+}
+
+.background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #7f7fd5, #86a8e7); /* Matches the original image's background */
+    z-index: -2; /* Puts it behind everything */
+}
+
+/* Container for centering the card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Ensures card is above the background gradient */
+}
+
+/* Main Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Fixed width as seen in the image */
+    padding: 30px;
+    text-align: center;
+    position: relative; /* For Windows activation notice positioning if needed */
+}
+
+/* Logo and Title Section */
+.logo-section {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px; /* If logo has a background */
+}
+
+.logo-section h1 {
+    font-size: 1.8em;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.logo-section p {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+}
+
+/* Tabs for Login/Sign Up */
+.tabs {
+    display: flex;
+    background-color: var(--light-blue-bg); /* Lighter background for tabs */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--text-color-medium);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background-color: var(--card-bg); /* White background for active tab */
+    color: var(--text-color-dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow for active tab */
+}
+
+/* Form Sections */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px; /* Spacing between elements */
+    display: none; /* Hidden by default */
+}
+
+.form-section.active {
+    display: flex; /* Show active form */
+}
+
+.form-section label {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-bottom: -5px; /* Adjust spacing with input */
+    font-weight: 500;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"] {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--text-color-dark);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-section input[type="text"]:focus,
+.form-section input[type="password"]:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(52, 113, 224, 0.2);
+}
+
+.form-section input::placeholder {
+    color: var(--text-color-light);
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    background-color: #2b60cc; /* Slightly darker blue */
+    transform: translateY(-2px);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 0.9em;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #2b60cc;
+}
+
+/* Windows Activation Notice (positioned at bottom-right) */
+.windows-activation-notice {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 1000;
+}
+
+.windows-activation-notice span:first-child {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* Responsive adjustments for smaller screens if necessary, though card is fixed width */
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .logo-section h1 {
+        font-size: 1.6em;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .windows-activation-notice {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.7em;
+    }
+}

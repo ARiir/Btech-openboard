@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech OpenBoard - Reports & Analytics</title>
+    <link rel="stylesheet" href="static.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-name">
+            <span class="material-icons logo-icon">school</span>
+            <span class="logo-text">BTech OpenBoard</span>
+        </div>
+        <nav class="nav-links">
+            <a href="static.html" class="nav-item">Statistic</a>
+            <a href="app.html" class="nav-item active">Approval</a>
+            <a href="user.html" class="nav-item">User</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-initials">JS</div>
+            <span class="user-name">John Smith</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-header">
+            <h1 class="page-title">Reports & Analytics</h1>
+            <button id="downloadReportBtn" class="download-button">Download Report</button>
+        </div>
+
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-value">247</span>
+                <p class="kpi-label">Total Suggestions</p>
+                <p class="kpi-trend up">↑ 12% this month</p>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-value">45</span>
+                <p class="kpi-label">Implemented</p>
+                <p class="kpi-trend up">↑ 8% this month</p>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-value">1,234</span>
+                <p class="kpi-label">Active Users</p>
+                <p class="kpi-trend up">↑ 15% this month</p>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-value">89%</span>
+                <p class="kpi-label">Satisfaction Rate</p>
+                <p class="kpi-trend up">↑ 3% this month</p>
+            </div>
+        </section>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>Suggestions by Category</h3>
+                <div class="category-list">
+                    <div class="category-item">
+                        <span class="category-name">Technology & IT</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar tech-it" style="width: 35%;"></div>
+                        </div>
+                        <span class="category-percentage">35%</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Campus Facilities</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar facilities" style="width: 28%;"></div>
+                        </div>
+                        <span class="category-percentage">28%</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Student Life</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar student-life" style="width: 22%;"></div>
+                        </div>
+                        <span class="category-percentage">22%</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Academic Services</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar academic" style="width: 15%;"></div>
+                        </div>
+                        <span class="category-percentage">15%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Implementation Status</h3>
+                <div class="status-list">
+                    <div class="status-item">
+                        <span class="status-color implemented"></span>
+                        <span class="status-label">Implemented</span>
+                        <span class="status-value">45 <span class="percentage">(18%)</span></span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-color in-progress"></span>
+                        <span class="status-label">In Progress</span>
+                        <span class="status-value">32 <span class="percentage">(13%)</span></span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-color under-review"></span>
+                        <span class="status-label">Under Review</span>
+                        <span class="status-value">89 <span class="percentage">(36%)</span></span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-color pending"></span>
+                        <span class="status-label">Pending</span>
+                        <span class="status-value">81 <span class="percentage">(33%)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="monthly-trends">
+            <h3>Monthly Participation Trends</h3>
+            <div class="chart-placeholder">
+                <!-- A real chart library (e.g., Chart.js, D3.js) would go here --><p>Chart would be rendered here (e.g., line graph)</p>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="windows-activation-notice">
+        <span>Activate Windows</span>
+        <span>Go to Settings to activate Windows.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
